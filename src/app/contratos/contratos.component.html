@@ -1,0 +1,23 @@
+<navbar>
+</navbar>
+<sidebar></sidebar>
+<div class="navbar-conteudo">
+  <botao-padrao (click)="AbreModal('Adicionar')">Adicionar</botao-padrao>
+  <botao-padrao (click)="AbreModal('Editar')">Editar</botao-padrao>
+  <botao-padrao>Cancelar</botao-padrao>
+</div>
+<div class="container-home"></div>
+
+<modal [titulo]="modalTitulo" [visivel]="modalEhVisivel" (Fechar)="FechaModal()" (Enviar)="EnviaFormulario()">
+  <form #myForm="ngForm">
+    <!-- Adicione seu formulário aqui -->
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" ngModel>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" ngModel>
+    </div>
+  </form>
+</modal>

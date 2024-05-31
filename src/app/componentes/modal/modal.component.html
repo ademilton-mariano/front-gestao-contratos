@@ -1,0 +1,15 @@
+<div class="modal-overlay" *ngIf="visivel">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>{{ titulo }}</h2>
+      <botao-padrao (click)="Fechar()">x</botao-padrao>
+    </div>
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+    <div class="modal-footer">
+      <botao-padrao (click)="Enviar()">Enviar</botao-padrao>
+      <botao-padrao (click)="Fechar()">Cancelar</botao-padrao>
+    </div>
+  </div>
+</div>
